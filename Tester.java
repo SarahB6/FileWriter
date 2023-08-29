@@ -14,9 +14,13 @@ public class Tester
         String string = "this is a test";
         frc.does();
         
+        System.out.println();
         System.out.println("test");
         frc.writeFile(fileName, string);
         String s = frc.readFile(fileName);
         System.out.println(s);
+
+        System.out.println();
+        System.out.println("# of characters: " + frc.countCharacters(fileName));
     }
 }

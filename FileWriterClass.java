@@ -41,4 +41,17 @@ public class FileWriterClass
         
 
     }
+
+    public int countCharacters(String fileName) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
+        int characterCount = 0;
+        while(br.ready()) {
+            characterCount++;
+            br.read();
+        }
+        br.close();
+        return characterCount;
+
+    }
+
 }
